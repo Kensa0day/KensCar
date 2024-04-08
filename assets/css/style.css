@@ -957,10 +957,9 @@ section {
 # Product Cars
 --------------------------------------------------------------*/
 
-.portfolio {
+/* .portfolio {
   text-align: center;
   padding-top: 7rem;
-
 }
 
 .portfolio h4{
@@ -991,7 +990,7 @@ section {
 
 /* Must portfolio */
 
-.portfolio .arr-row{
+/* .portfolio .arr-row{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2.5rem;
@@ -1030,57 +1029,7 @@ section {
   color: black;
 }
 
-/* .arr-row .arr-col .rating {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  padding-bottom: 0.5rem;
-}
 
-.arr-col .rating .stars i{
-  color: #E57515;
-  font-size: 1.4rem;
-}
-
-.arr-col .rating .review span{
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #646161;
-}
-
-.arr-col .features span i{
-  color: #E57515;
-  padding-right: 0.3rem;
-
-}
-
-.arr-col .price {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.arr-col .price p{
-  color: #E57515;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-
-.arr-col .price button {
-  background: #E57515;
-  padding: 0.8rem 2.8rem;
-  color: #fff;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-
-.arr-col .price button:hover {
-  background: black;
-
-} */
 
 .concat{
   margin-left: 1rem;
@@ -1141,14 +1090,16 @@ section {
   .portfolio .arr-row {
     grid-template-columns: 1fr 1fr;
   }
+
 }
 
 @media(max-width:768x) {
   .portfolio .arr-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .arr-row .arr-col .image {
+    width: 100%;
     height: auto;
 
   }
@@ -1156,13 +1107,184 @@ section {
   .portfolio h1{
     font-size: 2.8rem;
   }
+
+  .arr-col button {
+    margin-top: 4rem;
+  }
 }
 
 @media(max-width:450x) {
   .portfolio h1{
     font-size: 2.4rem;
   }
+} */ */
+
+.portfolio {
+  text-align: center;
+  padding-top: 7rem;
 }
+
+.portfolio h4 {
+  color: #E57515;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding-bottom: 1.5rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+}
+
+.portfolio h4 i {
+  padding-right: 0.5rem;
+}
+
+.portfolio h1 {
+  padding-bottom: 4rem;
+  font-size: 4.7rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: black;
+}
+
+.portfolio h1 span {
+  color: black;
+}
+
+/* Must portfolio */
+
+.portfolio .arr-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.arr-row .arr-col {
+  padding: 1rem;
+  box-shadow: 0 0 5px #646161;
+  background: #fff;
+  border-radius: 10px;
+  text-align: justify;
+}
+
+.arr-row .arr-col .images {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.5 ease;
+}
+
+.arr-row .arr-col .images img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.arr-row .arr-col h5 {
+  font-size: 1.8rem;
+  padding: 1rem;
+  color: black;
+}
+
+.concat {
+  margin-left: 1rem;
+}
+
+.arr-row .arr-col .rating {
+  display: contents;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+
+.arr-col .rating .stars i {
+  color: #E57515;
+  font-size: 1.4rem;
+}
+
+.arr-col .rating .review span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #646161;
+}
+
+.arr-col .features span i {
+  color: #E57515;
+  padding-right: 0.3rem;
+}
+
+.arr-col .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arr-col .price p {
+  color: #E57515;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.arr-col button {
+  background: #E57515;
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: 0.3s ease;
+}
+
+.arr-col button:hover {
+  background: black;
+}
+
+@media(max-width: 1350px) {
+  .portfolio .arr-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 768px) {
+  .portfolio .arr-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .arr-row .arr-col .images {
+    height: auto;
+  }
+
+  .portfolio h1 {
+    font-size: 2.8rem;
+  }
+
+  .arr-col button {
+    margin-top: 3rem;
+  }
+}
+
+@media(max-width: 450px) {
+  .portfolio .arr-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .portfolio h1 {
+    font-size: 2.4rem;
+  }
+
+  .arr-col button {
+    margin-top: 2rem;
+  }
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Portfolio Details
